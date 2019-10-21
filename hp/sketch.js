@@ -40,5 +40,5 @@ function draw() {
   fill(0);
   noStroke();
   // textFont(font);
-  text(house, 10, 200);
+  text(house, 600, 200);
 }
