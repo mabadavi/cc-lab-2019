@@ -52,7 +52,7 @@ function setup() {
     var x = mercX(lon) - cx;
     var y = mercY(lat) - cy;
 
-      image(img, x, y, 5, 5);
+      image(img, x, y, 10, 10);
 
     // fill(90, 147, 74);
     // ellipse(x, y, 10, 10);

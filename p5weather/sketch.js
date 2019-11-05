@@ -38,8 +38,19 @@ let json;
 function preload() {
   // The URL for the JSON data (replace "imperial" with "metric" for celsius)
 
-  let url = "https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=imperial&APPID=ec867d0fbf1b967a0d2276796ccaf410";
+  let weatherapi = 'https://api.openweathermap.org/data/2.5/weather?q=';
+  let apiKey = '&APPID=ec867d0fbf1b967a0d2276796ccaf410';
+  let units = 'units=imperial';
   json = loadJSON(url);
+}
+
+function runWeather() {
+  let url = weatherapi + input.value() + apiKey + units;
+  loadJSON(url, weatherData);
+}
+
+function weatherData(data) {
+  weather = data;
 }
 
 function setup() {
@@ -60,14 +71,14 @@ function setup() {
 function draw() {
   background(255);
   fill(0);
-
+  if(weather) {
+    
+  }
   // Display all the stuff we want to display
   text("City: New York", 10, 50);
   text("Current temperature: " + temperature, 10, 70);
   text("High of: " + max_temp, 10, 90);
   text("Low of: " + min_temp, 10, 110);
   text("Forecast: " + weatherdesc, 10, 130);
-  if (mouseIsPressed) {
-    image(imageBrush, mouseX - imageBrush.width/2, mouseY - imageBrush.height/2);
-  }
+  image(imageBrush, mouseX - imageBrush.width/2, mouseY - imageBrush.height/2);
 }
