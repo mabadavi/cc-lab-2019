@@ -7,34 +7,166 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/p5.js"></script>
     <script src="js/p5.sound.js"></script>
     <script src="js/sketch.js"></script>
 	  <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <div class="container">
+    <div id="container">
     <img src="goodcorp.gif" />
     <br /><br />
+    <p id="welcome">Welcome, <span id="bizname"></span> (<span id="title">Manager</span>).</p>
+
+
+    <div id="first">
       <h3>Employee login:</h3>
       <textarea name="name" id="name" cols="20" rows="2"></textarea>
       <br /><br />
-      <button onclick="submitAnswer()" id="login">Login</button>
+      <button onclick="submitAnswer()" id="ButtonOne">Login</button>
+    </div>
 
-      <p>Welcome, <ol id="classResponses"></ol> (Manager).</p>
+    <div id="second">
+      <button id="ButtonTwo">Start Work</button>
+    </div>
 
+    <div id="third">
       <p><strong>Sales: $2,325,893</strong><br />
       Planes made: 23<br />
-      Computers made: 5433<br />
+      Computers made: 5,433<br />
       Items shipped: 204,539</p>
+      <button id="ButtonThree">Keep Working</button>
+    </div>
 
-    <div class="third">
+    <div id="fourth">
+      <p><strong>Sales: $4,328,543</strong><br />
+      Planes made: 56<br />
+      Computers made: 10,843<br />
+      Items shipped: 408,594</p>
+      <p class="alert">Alert: the public has asked you to stop working, citing health concerns.</p>
+      <p>What would you like to do?</p>
+      <button id="ButtonFour">Keep Working</button>
+      <button id="ButtonFourStop">Stop Working</button>
     </div>
-    <div class="fourth">
+
+    <div id="fourthStop">
+      <p><strong>Sales: $7,508,027</strong><br />
+      Planes made: 145<br />
+      Computers made: 24,987<br />
+      Items shipped: 805,295</p>
+      <p class="alert">Alert: you have received a warning from Human Resources.</p>
+      <p>What would you like to do?</p>
+      <button id="ButtonFourStop1">Start Working</button>
+      <button id="ButtonFourStop2">File a Complaint</button>
     </div>
-    <div class="fifth">
+
+
+    <div id="fourthStopComplaint1">
+      <p><strong>Sales: $4,328,543</strong><br />
+      Planes made: 56<br />
+      Computers made: 10,843<br />
+      Items shipped: 408,594</p>
+      <p class="alert">Alert: You are the first person to file a complaint. You have been terminated.</p>
     </div>
+
+    <div id="fourthStopComplaint2">
+      <p><strong>Sales: $4,328,543</strong><br />
+      Planes made: 56<br />
+      Computers made: 10,843<br />
+      Items shipped: 408,594</p>
+      <p class="alert">Alert: You are the eleventh person to file a complaint. GoodCorp will change its policies to reduce its enviornmental impact.</p>
+    </div>
+
+    <div id="fifth">
+      <p><strong>Sales: $7,508,027</strong><br />
+      Planes made: 145<br />
+      Computers made: 24,987<br />
+      Items shipped: 805,295</p>
+      <p class="alert">Alert: you have received a salary increase.</p>
+      <p class="alert">Alert: the public is staging a citywide protest against GoodCorp, citing health concerns.</p>
+      <p>What would you like to do?</p>
+      <button id="ButtonFive">Keep Working</button>
+      <button id="ButtonFiveStop">Stop Working</button>
+    </div>
+
+    <div id="fifthStop">
+      <p><strong>Sales: $7,508,027</strong><br />
+      Planes made: 145<br />
+      Computers made: 24,987<br />
+      Items shipped: 805,295</p>
+      <p>Alert: you have received a warning from Human Resources.</p>
+      <p>What would you like to do?</p>
+      <button id="ButtonFiveStop1">Start Working</button>
+      <button id="ButtonFiveStop2">File a Complaint</button>
+    </div>
+
+    <div id="fifthStopComplaint1">
+      <p><strong>Sales: $7,508,027</strong><br />
+      Planes made: 145<br />
+      Computers made: 24,987<br />
+      Items shipped: 805,295</p>
+      <p class="alert">Alert: You are the first person to file a complaint. You have been terminated.</p>
+    </div>
+
+    <div id="fifthStopComplaint2">
+      <p><strong>Sales: $7,508,027</strong><br />
+      Planes made: 145<br />
+      Computers made: 24,987<br />
+      Items shipped: 805,295</p>
+      <p class="alert">Alert: You are the eleventh person to file a complaint. GoodCorp will change its policies to reduce its enviornmental impact.</p>
+    </div>
+
+    <div id="sixth">
+      <p><strong>Sales: $14,243,764</strong><br />
+      Planes made: 258<br />
+      Computers made: 45,098<br />
+      Items shipped: 1,542,694</p>
+      <p class="alert">Alert: you have been promoted.</p>
+      <p class="alert">Alert: the public is starting to perish.</p>
+      <p>What would you like to do?</p>
+      <button id="ButtonSix">Keep Working</button>
+      <button id="ButtonSixStop">Stop Working</button>
+    </div>
+
+    <div id="sixthStop">
+      <p><strong>Sales: $14,243,764</strong><br />
+      Planes made: 258<br />
+      Computers made: 45,098<br />
+      Items shipped: 1,542,694</p>
+      <p class="alert">Alert: you have received a warning from Human Resources.</p>
+      <p class="alert">What would you like to do?</p>
+      <button id="ButtonSixStop1">Start Working</button>
+      <button id="ButtonSixStop2">File a Complaint</button>
+    </div>
+
+
+    <div id="sixthStopComplaint1">
+      <p><strong>Sales: $14,243,764</strong><br />
+      Planes made: 258<br />
+      Computers made: 45,098<br />
+      Items shipped: 1,542,694</p>
+      <p class="alert">Alert: You are the first person to file a complaint. You have been terminated.</p>
+    </div>
+
+    <div id="fifthStopComplaint2">
+      <p><strong>Sales: $14,243,764</strong><br />
+      Planes made: 258<br />
+      Computers made: 45,098<br />
+      Items shipped: 1,542,694</p>
+      <p class="alert">Alert: You are the eleventh person to file a complaint. GoodCorp will change its policies to reduce its enviornmental impact.</p>
+    </div>
+
+    <div id="seventh">
+      <p><strong>Sales: $29,543,085</strong><br />
+      Planes made: 504<br />
+      Computers made: 76,048<br />
+      Items shipped: 3,143,598</p>
+      <p class="alert">Alert: GoodCorp has taken over the world.</p>
+      <p class="alert">Alert: the city has been destroyed due to environmental disaster.</p>
+    </div>
+
   </div>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
-  </body>
+</body>
 </html>

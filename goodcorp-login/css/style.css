@@ -1,13 +1,7 @@
 html {
   background-color: #000000;
 }
-body,
-html,
-p {
-  font-family: 'Gotham Book';
-  src: url('fonts/Gotham-Book.otf') format('opentype');
-  color: white;
-}
+
 h1,
 h2,
 h3,
@@ -16,7 +10,8 @@ h4 {
   src: url('fonts/Gotham-Bold.otf') format('opentype');
   color: white;
 }
-#login {
+
+button {
   background-color: #d7bf40;
   border: none;
   color: white;
@@ -28,12 +23,38 @@ h4 {
   font-family: 'Gotham Bold';
 }
 
-.container {
+#ButtonFourStop,
+#ButtonFiveStop,
+#ButtonFiveStop2,
+#ButtonSixStop,
+#ButtonSixStop2 {
+  background-color: #B50089;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Gotham Bold';
+}
+
+div {
+  font-family: 'Gotham Medium', sans-serif;
+  src: url('fonts/Gotham-Medium.otf') format('opentype');
+  color: white;
+  font-size: 16px;
+}
+
+#container {
   max-width: 600px;
   margin: auto;
   text-align: center;
   padding-top: 10px;
+  font-size: 16px;
+  font-family: 'Gotham Book', sans-serif;
 }
+
 .bold {
   font-family: 'Gotham Bold';
   src: url('fonts/Gotham-Bold.otf') format('opentype');
@@ -42,8 +63,15 @@ h4 {
   font-family: 'Gotham Medium';
   src: url('fonts/Gotham-Medium.otf') format('opentype');
 }
+
 ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.alert {
+  color: red;
+  font-family: 'Gotham Bold';
+  src: url('fonts/Gotham-Bold.otf') format('opentype');  
 }
